@@ -1,0 +1,47 @@
+/* oswald- 400 */
+@font-face {
+  font-family: 'Oswald-400';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Oswald/oswald-400.woff2') format('woff2'),
+    url('../fonts/Oswald/oswald-400.woff') format('woff');
+  font-display: swap;
+}
+/* oswald-500*/
+@font-face {
+  font-family: 'Oswald-500';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/Oswald/oswald-500.woff2') format('woff2'),
+    url('../fonts/Oswald/oswald-500.woff') format('woff');
+  font-display: swap;
+}
+/* oswald-700*/
+@font-face {
+  font-family: 'Oswald-700';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/Oswald/oswald-700.woff2') format('woff2'),
+    url('../fonts/Oswald/oswald-700.woff') format('woff');
+  font-display: swap;
+}
+
+/* montserrat-400*/
+@font-face {
+  font-family: 'Мontserrat-400';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Montserrat/montserrat-400.woff2') format('woff2'),
+    url('../fonts/Montserrat/montserrat-400.woff') format('woff');
+  font-display: swap;
+}
+
+/* montserrat-700*/
+@font-face {
+  font-family: 'Мontserrat-700';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/Montserrat/montserrat-700.woff2') format('woff2'),
+    url('../fonts/Montserrat/montserrat-700.woff') format('woff');
+  font-display: swap;
+}

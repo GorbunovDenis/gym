@@ -1,0 +1,86 @@
+@keyframes moveright {
+  0% {
+    transform: translateX(-100px);
+    visibility: visible;
+  }
+
+  100% {
+    transform: translateX(0);
+    visibility: visible;
+  }
+}
+
+@keyframes moveleft {
+  0% {
+    transform: translateX(100px);
+    visibility: visible;
+  }
+
+  100% {
+    transform: translateX(0);
+    visibility: visible;
+  }
+}
+
+// @keyframes zoomin {
+//   0% {
+//     transform: scale(0.5);
+//     visibility: visible;
+//   }
+
+//   100% {
+//     transform: scale(1);
+//     visibility: visible;
+//   }
+// }
+
+@keyframes movedown {
+  0% {
+    transform: translateY(-100px);
+    visibility: visible;
+  }
+
+  100% {
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+
+//плавно спустим форму
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+  70% {
+    transform: translateY(30px);
+  }
+  90% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+//потрясём форму
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}

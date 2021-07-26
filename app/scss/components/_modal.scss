@@ -1,0 +1,198 @@
+// Всплывающая форма
+
+//позиционируем форму
+.modal {
+  position: fixed;
+  background-color: #f8f3f0;
+  // background-image: url('../images/pattern-light.jpg');
+  background-position: 0 0;
+  background-repeat: repeat;
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+}
+
+//позиционируем крестик для кнопки закрыть
+.modal-close {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border: 0;
+  cursor: pointer;
+  top: 10px;
+  right: 10px;
+  outline: transparent;
+  border-radius: 6px;
+  border: 1px solid #c6c6c6;
+}
+
+//рисуем крестик для кнопки закрыть
+.modal-close::before,
+.modal-close::after {
+  content: '';
+  position: absolute;
+  top: 9px;
+  left: 1px;
+  width: 19px;
+  height: 3px;
+  background-color: #d0d0d0;
+}
+.modal-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-close::after {
+  transform: rotate(-45deg);
+}
+
+.login-form input[type='text'],
+.login-form input[type='password'] {
+  width: 100%;
+  padding: 10px 15px;
+  padding-right: 40px;
+  text-transform: uppercase;
+
+  color: #000000;
+  text-transform: inherit;
+  background-color: #f9f6f3;
+  border: 2px solid #000000;
+}
+
+//оформляем и центрируем форму
+.modal-contacts {
+  display: none;
+  width: 640px;
+  height: 543px;
+  background-color: #ffffff;
+  padding: 60px;
+  top: 50%;
+  left: 50%;
+  margin-top: -271px;
+  margin-left: -320px;
+}
+
+.login-contacts {
+  display: flex;
+  justify-content: space-between;
+}
+
+.login-form__contacts input[type='text'],
+input[type='phone'] {
+  width: 250px;
+  background-color: #fff;
+  border: 1px solid #c6c6c6;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 10px;
+  outline: transparent;
+  &::placeholder {
+    color: #c6c6c6;
+  }
+}
+
+.login-form__contacts input[type='email'] {
+  margin-bottom: 15px;
+  background-color: #fff;
+  border: 1px solid #c6c6c6;
+  border-radius: 6px;
+  padding: 15px;
+  outline: transparent;
+  width: 100%;
+  &::placeholder {
+    color: #c6c6c6;
+  }
+}
+
+//задаём фокус
+.login-form__contacts input:focus {
+  box-shadow: 0 0 5px #c6c6c6;
+}
+
+.modal-contacts h2 {
+  margin-bottom: 30px;
+  @extend %Oswald-500;
+  font-size: 24px;
+  color: #151515;
+}
+
+.modal-contacts__close::before,
+.modal-contacts__close::after {
+  border-radius: 6px;
+  background-color: #c6c6c6;
+}
+.modal-contacts__close:focus {
+  box-shadow: 0 0 5px #c6c6c6;
+}
+
+.login-form__contacts .form__textarea {
+  border: 1px solid #c6c6c6;
+  border-radius: 6px;
+  width: 100%;
+  resize: none;
+  min-height: 152px;
+  margin-bottom: 13px;
+  background-color: #fff;
+  padding: 15px;
+  outline: transparent;
+  transition: all 0.3s linear;
+  &::placeholder {
+    color: #c6c6c6;
+  }
+}
+.login-form__contacts .form__textarea:focus {
+  box-shadow: 0 0 5px #c6c6c6;
+}
+
+//стилизуем кнопку
+.login-form__contacts .form__btn {
+  width: 100%;
+  max-width: 250px;
+  text-transform: uppercase;
+  outline: transparent;
+  color: #fff;
+  background-color: #0eaa6e;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 16px 0px;
+  border-radius: 6px;
+  transition: all 0.3s linear;
+  @extend %Oswald-700;
+}
+.login-form__contacts .form__btn:focus {
+  box-shadow: 0 0 10px #c6c6c6;
+}
+
+.modal-show {
+  display: block;
+  animation-name: bounce;
+  animation-duration: 0.6s;
+}
+.modal-error {
+  animation-name: shake;
+  animation-duration: 0.6s;
+}
+
+@media (max-width: 768px) {
+  // .modal-contacts {
+  //   display: none;
+  //   width: 350px;
+  //   height: 360px;
+  //   background-color: #ffffff;
+  //   padding: 60px;
+  //   top: 50%;
+  //   left: 50%;
+  //   margin-top: -271px;
+  //   margin-left: -320px;
+  // }
+}
+@media (max-width: 375px) {
+  // .modal-contacts {
+  //   display: none;
+  //   width: 350px;
+  //   height: 360px;
+  //   background-color: #ffffff;
+  //   padding: 60px;
+  //   top: 50%;
+  //   left: 50%;
+  //   margin-top: -271px;
+  //   margin-left: -320px;
+  // }
+}

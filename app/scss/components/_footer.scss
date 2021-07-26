@@ -1,0 +1,249 @@
+.contact {
+  padding-bottom: 100px;
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: space-between;
+    margin-bottom: 50px;
+  }
+  &__item {
+    color: #4d4d4d;
+    padding: 56px 0;
+    min-height: 240px;
+    border: 1px solid #c6c6c6;
+    border-radius: 6px;
+    text-align: center;
+    width: 340px;
+    &:not(:nth-child(3n)) {
+      margin-right: 20px;
+    }
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+  &__icon {
+    margin: 0 auto;
+    margin-bottom: 37px;
+  }
+
+  &__address span {
+    font-size: 14px;
+    display: block;
+    font-style: normal;
+  }
+
+  &__phone {
+    font-size: 14px;
+    line-height: 21px;
+    display: block;
+  }
+  &__mail {
+    font-size: 14px;
+    display: block;
+  }
+
+  &__info {
+    display: flex;
+  }
+  &__subtitle {
+    margin-bottom: 30px;
+    @extend %Oswald-500;
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+.form-contact {
+  width: 50%;
+  margin-right: 20px;
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  &__input--phone {
+    @extend %Мontserrat-400;
+    font-size: 14px;
+    padding: 15px;
+    max-width: 250px;
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid #c6c6c6;
+    outline: transparent;
+    transition: all 0.3s linear;
+
+    &:focus {
+      box-shadow: 0 0 5px #c6c6c6;
+    }
+    &::placeholder {
+      color: #c6c6c6;
+    }
+  }
+
+  &__input--name {
+    @extend %Мontserrat-400;
+    font-size: 14px;
+    padding: 15px;
+    max-width: 250px;
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid #c6c6c6;
+    outline: transparent;
+    transition: all 0.3s linear;
+    &:focus {
+      box-shadow: 0 0 6px #c6c6c6;
+    }
+    &::placeholder {
+      color: #c6c6c6;
+    }
+  }
+  &__input--email {
+    @extend %Мontserrat-400;
+    font-size: 14px;
+    padding: 15px;
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    border: 1px solid #c6c6c6;
+    outline: transparent;
+    transition: all 0.3s linear;
+    &:focus {
+      box-shadow: 0 0 6px #c6c6c6;
+    }
+    &::placeholder {
+      color: #c6c6c6;
+    }
+  }
+  &__textarea {
+    @extend %Мontserrat-400;
+    border: 1px solid #c6c6c6;
+    border-radius: 6px;
+    width: 100%;
+    resize: none;
+    min-height: 152px;
+    margin-bottom: 13px;
+    background-color: #fff;
+    padding: 15px;
+    outline: transparent;
+    transition: all 0.3s linear;
+    margin-bottom: 25px;
+    &:focus {
+      box-shadow: 0 0 6px #c6c6c6;
+    }
+    &::placeholder {
+      color: #c6c6c6;
+    }
+  }
+  &__btn {
+    display: inline-block;
+    text-transform: uppercase;
+    outline: transparent;
+    color: #fff;
+    background-color: #0eaa6e;
+    font-size: 14px;
+    line-height: 20px;
+    @extend %Oswald-700;
+    padding: 16px 76px;
+    border-radius: 6px;
+    transition: all 0.3s linear;
+    margin-top: -8px;
+    &:hover {
+      background-color: #13d48a;
+    }
+    &:active {
+      background-color: #0a8555;
+    }
+    &:focus {
+      box-shadow: 0 0 5px #626463;
+    }
+  }
+}
+.map iframe {
+  width: 519px;
+  height: 357px;
+}
+
+@media (max-width: 1024px) {
+  .contact {
+    &__item {
+      width: 318px;
+    }
+  }
+  .form-contact {
+    &__input--phone,
+    &__input--name {
+      max-width: 220px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    &__item {
+      width: 229px;
+    }
+  }
+  .map iframe {
+    width: 354px;
+    height: 417px;
+  }
+  .form-contact {
+    &__item {
+      flex-direction: column;
+      margin-bottom: 10px;
+    }
+    &__info {
+      display: block;
+    }
+    &__input--name {
+      margin: 0px 0px 10px 0px;
+      width: 100%;
+      max-width: none;
+    }
+    &__input--phone {
+      max-width: none;
+      width: 100%;
+    }
+    &__input--email {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .contact {
+    padding-bottom: 70px;
+    &__item {
+      width: 100%;
+      margin-bottom: 35px;
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+    &__info {
+      flex-wrap: wrap;
+    }
+    &__subtitle {
+      margin-bottom: 25px;
+    }
+  }
+  .form-contact {
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
+  .contact__item:not(:nth-child(3n)) {
+    margin-right: 0px;
+  }
+
+  .map iframe {
+    max-width: 100%;
+    height: 206px;
+  }
+}

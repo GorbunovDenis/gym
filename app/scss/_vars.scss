@@ -1,0 +1,96 @@
+// colors
+$accent: #3a3f4c;
+$bg: #fffbf5;
+
+// fonts
+%Oswald-400 {
+  font-family: 'Oswald-400', sans-serif;
+  font-weight: 400;
+}
+
+%Oswald-500 {
+  font-family: 'Oswald-500', sans-serif;
+  font-weight: 500;
+}
+
+%Oswald-700 {
+  font-family: 'Oswald-700', sans-serif;
+  font-weight: 700;
+}
+
+%Мontserrat-400 {
+  font-family: 'Мontserrat-400', sans-serif;
+  font-weight: 400;
+}
+
+%Мontserrat-700 {
+  font-family: 'Мontserrat-700', sans-serif;
+  font-weight: 700;
+}
+
+%btn {
+  position: relative;
+  display: inline-block;
+  padding: 25px 95px;
+  font-size: 18px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  // outline: none;
+  color: #3a3f4c;
+  background-color: #f3c745;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0 5px #e8a52b;
+
+  &:hover {
+    background-color: #f6bf1a;
+  }
+
+  &:active {
+    transition-property: all;
+    transition-duration: 0.5s;
+    background-color: #f6bf1a;
+    box-shadow: 0 2px #e99f17;
+    transform: translateY(4px);
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 65px;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    background-image: url(../images/icons/angle-next.svg);
+    background-repeat: no-repeat;
+  }
+}
+
+// %checkbox-hidden {
+//   width: 1px;
+//   height: 1px;
+//   overflow: hidden;
+//   clip: rect(0 0 0 0);
+//   position: absolute;
+// }
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
+
+@mixin font-face($font-family, $url, $weight) {
+  @font-face {
+    font-family: '#{$font-family}';
+    src: url('../fonts/#{$url}.woff2') format('woff2'),
+      url('../#{$url}.woff') format('woff');
+    font-weight: #{$weight};
+    font-display: swap;
+    font-style: normal;
+  }
+}

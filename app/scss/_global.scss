@@ -1,0 +1,54 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  line-height: 1.5;
+  color: #151515;
+  @extend %Мontserrat-400;
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+.title {
+  position: relative;
+  text-align: center;
+  font-size: 48px;
+  line-height: 72px;
+  text-transform: uppercase;
+  @extend %Oswald-500;
+  margin-bottom: 70px;
+  &::before {
+    content: '';
+    position: absolute;
+    border: 2px solid #0eaa6e;
+    width: 79px;
+    bottom: 0;
+  }
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.container {
+  max-width: 1090px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
